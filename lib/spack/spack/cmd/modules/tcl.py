@@ -44,8 +44,7 @@ def setdefault(module_type, specs, args):
     with llnl.util.filesystem.working_dir(module_folder):
         if os.path.exists('.version'):
             os.remove('.version')
-        default = os.path.join(module_folder, '.version')
-        llnl.util.filesystem.touch(default)
-        with llnl.util.filesystem.open_if_filename(default, mode='w') as f:
+        version_file = os.path.join(module_folder, '.version')
+        with open(version_file, mode='w') as f:
         	f.write('#%Module\n')
         	f.write('set ModulesVersion %s\n' % module_basename)
