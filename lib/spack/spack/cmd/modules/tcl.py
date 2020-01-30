@@ -6,10 +6,9 @@
 import functools
 import os
 
-import spack.cmd.modules
-
 import llnl.util.filesystem
 import spack.cmd.common.arguments
+import spack.cmd.modules
 
 
 def add_command(parser, command_dict):
