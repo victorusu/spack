@@ -45,5 +45,5 @@ def setdefault(module_type, specs, args):
             os.remove('.version')
         version_file = os.path.join(module_folder, '.version')
         with open(version_file, mode='w') as f:
-        	f.write('#%Module\n')
-        	f.write('set ModulesVersion %s\n' % module_basename)
+            f.write('#%Module\n')
+            f.write('set ModulesVersion %s\n' % module_basename)
